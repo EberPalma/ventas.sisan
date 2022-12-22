@@ -1,24 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// * Componentes
+// import Navigation from "./components/navigation";
+
+// * Componentes
+import Root from "./components/root";
+import VentasForm from "./components/ventas-form";
+import VentasList from "./components/list/ventas-list";
+import ErrorPage from "./components/error-page";
+
+// * Enrutamiento
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const routes = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "lista",
+        element: <VentasList />,
+      },
+      {
+        path: "venta",
+        element: <VentasForm />,
+      },
+    ],
+  },
+]);
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <RouterProvider router={routes} />
     </div>
   );
 }

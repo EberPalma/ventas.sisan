@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.navigation-bar{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+    background: rgb(170, 168, 168);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    div{
+        text-align: center;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+        background: rgb(170, 168, 168);
+        color: white;
+        width: 2rem;
+        aspect-ratio: 1/1;
+        border-radius: 100%;
+        border: 5px solid white;
+        margin-top: -2.5rem;
+    }
+}
+
+.ventas-form{
+    padding: 1rem;
+    form{
+        display: grid;
+        grid-template-columns: 1fr 0.5fr 0.5fr;
+        justify-items: center;
+        gap: 0.5rem;
+        select{
+            width: 100%;
+        }
+        input, button, select{
+            height: 2rem;
+            border-radius: 10px;
+            font-size: 1rem;
+            border: 1px solid rgb(94, 94, 94);
+            padding-left: 0.5rem;
+            background: whitesmoke;
+        }
+        button{
+            border-radius: 100%;
+            aspect-ratio: 1/1;
+            padding: 0;
+        }
+    }
+    #cliente-venta{
+        width: 80%;
+        height: 2rem;
+        border-radius: 10px;
+        font-size: 1rem;
+        border: 1px solid rgb(94, 94, 94);
+        padding-left: 0.5rem;
+        background: whitesmoke;
+        margin-bottom: 0.5rem;
+    }
+    #agregar-venta{
+        padding: 0.5rem;
+    }
+}
+
+.ventas-table{
+    width: 100%;
+    padding: 10px;
+    table{
+        width: 100%;
+        text-align: left;
+        #cant{
+            width: 10%;
+        }
+        #td-productos{
+            width: 50%;
+        }
+        .total{
+            text-align: right;
+            padding-right: 1rem;
+        }
+        .producto-total, .producto-precio{
+            text-align: right;
+            padding: 0.5rem;
+        }
+        .importe-msg{
+            text-align: right;
+        }
+    }
+}
